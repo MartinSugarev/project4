@@ -1,5 +1,5 @@
-import Example from "../src/components/example/Example";
+import Header from "../src/components/example/Header";
 
 export default function Index() {
-  return <Example />;
+  return <Header />;
 }

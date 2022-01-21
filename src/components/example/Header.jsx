@@ -1,10 +1,10 @@
 import { Grid, Button, Input } from "@mui/material";
 import Logo from "../logo/Logo.jsx";
-import styles from "./Example.module.scss";
+import styles from "./Header.module.scss";
 import SearchIcon from '@mui/icons-material/Search';
 
 
-export default function Copyright() {
+export default function Header() {
   return (
     
   <div className={styles.wrapper}>
