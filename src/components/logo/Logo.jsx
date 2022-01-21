@@ -3,8 +3,11 @@ import * as React from 'react';
 
 export default function Logo({type}){
 
+
 return(
-    type === 'default' ? <img src='./images/logo.svg' /> : <img src='./images/logo-muted.svg'/>
+
+type === 'default' || '' ? <img src="./images/logo.svg"/> : <img src="./images/logo-muted.svg" />
+
 )
 
 }
