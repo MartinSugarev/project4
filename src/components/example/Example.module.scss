@@ -1,21 +1,38 @@
 @use "../../styles/colors";
 
-.wrapper {
-  padding: 100px;
-  background-color: colors.$primary_main;
-}
 
-.container {
-  display: flex !important;
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 20vh;
+  border: 3px;
+  border-style: dashed;
+  border-color: colors.$primary_main;
+  margin-top: 5%;
+  border-right-color: transparent;
+  border-left-color: transparent;
+
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo{
+  border-style: dotted;
+}
+.input{
+  background-color: black;
+  width: 400px;
+  height: 40px; 
+  border-radius: 20px;
+  font-size: 1em;
+  
 }
 
-.paper {
-  max-width: 350px;
-  width: 100%;
-  font-size: 10rem;
-  position: relative;
-  top: 180px;
-  text-align: center;
-}
+
