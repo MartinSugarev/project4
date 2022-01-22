@@ -1,4 +1,4 @@
-import styles from './Avatar.module.scss'
+import styles from '../components/avatar/Avatar.module.scss'
 import classNames from 'classnames'
 
 
