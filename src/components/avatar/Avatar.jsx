@@ -5,6 +5,8 @@ import styles from './Avatar.module.scss'
 
 export default function Avatar({size, url, verified}){
 
+console.log(verified);
+
 
 
 
