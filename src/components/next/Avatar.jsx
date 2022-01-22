@@ -5,14 +5,9 @@ import styles from './Avatar.module.scss'
 
 export default function Avatar({size, url, verified}){
 
-console.log(verified);
-
-
-
-
 return (
-    <div className={styles.avatar} >
-        <img className={styles.image} style={{width: size, height: size}} src={url.default.src}/>
+    <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
+        <img className={styles.image}  src={url.default.src}/>
        {verified === true ?  <img src="./image/verified.svg" className={styles.badge} />  : ''}
     </div>
 )
@@ -21,6 +16,6 @@ return (
 
 
 Avatar.defaultProps = {
-    size: '90px',
+    size: '90',
     verified: false
 }
