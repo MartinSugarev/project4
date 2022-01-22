@@ -4,11 +4,10 @@
 .image{
     object-fit: fill;
     border-radius: 50%;
-    width: 70%;
-    height: 70%;
-    
 }
 .avatar{
+    width: 100px;
+    height: 100px;
 display: grid;
 position: relative;    
 border-style: dashed;

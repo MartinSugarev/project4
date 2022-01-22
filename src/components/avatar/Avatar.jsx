@@ -11,8 +11,8 @@ console.log(verified);
 
 
 return (
-    <div className={styles.avatar} style={{width: size, height: size}}>
-        <img className={styles.image} src={url.default.src}/>
+    <div className={styles.avatar} >
+        <img className={styles.image} style={{width: size, height: size}} src={url.default.src}/>
        {verified === true ?  <img src="./image/verified.svg" className={styles.badge} />  : ''}
     </div>
 )
