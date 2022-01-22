@@ -16,9 +16,9 @@ export default function Header() {
           <Input startAdornment={<SearchIcon/>} className={styles.input} placeholder="Find items, users and activities" />
       </Grid>
       <Grid item >
-      <Button variant="text">Outlined</Button>
-      <Button variant="text">Outlined</Button>
-      <Button variant="outlined">Outlined</Button>
+      <Button variant="text">Home</Button>
+      <Button variant="text">Activity</Button>
+      <Button variant="outlined">Explore</Button>
       </Grid>
     </Grid>
   </div>
