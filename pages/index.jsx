@@ -7,7 +7,7 @@ export default function Index() {
   return ( 
    <>
        
-       <Avatar size="90px"  url={require('../src/components/avatar/image/avatar.png')}  />
+       <Avatar size="90px"   url={require('../src/components/avatar/image/avatar.png')} verified={false}/>
   </>
   )
 }
