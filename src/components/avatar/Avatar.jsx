@@ -8,16 +8,10 @@ export default function Avatar({size = 90, url = require('../../../public/images
 return (
     <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
         <img className={styles.image}  src={url.default.src} alt="Avatar"/>
-        <div className={styles.badge} >
-           <img src={badge.default.src} alt="Badge" style={{width: '100%', height: '100%'}} />
-       </div> 
+           <img className={styles.badge}  src={badge.default.src} alt="Badge"  />
 
     </div>
 )
 
 }
 
-Avatar.propTypes = {
-    size: PropTypes.number,
-    verified: PropTypes.boolean
-}
