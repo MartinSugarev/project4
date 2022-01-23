@@ -2,7 +2,7 @@ import styles from './Avatar.module.scss'
 import classNames from 'classnames'
 
 
-export default function Avatar({size = 90, url, verified = false}){
+export default function Avatar({size = 90, url = require('../../../public/images/avatar.png'), verified = false}){
  
 return (
     <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
