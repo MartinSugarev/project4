@@ -1,7 +1,7 @@
 import styles from './Avatar.module.scss'
 const badge = require('../../../public/images/verified.svg')
 
-function Avatar({size = 90, url, verified = false}){
+export default function Avatar({size = 90, url, verified = false}){
 
 return (
     <>
@@ -14,5 +14,5 @@ return (
 
 }
 
-export default Avatar
+ 
 
