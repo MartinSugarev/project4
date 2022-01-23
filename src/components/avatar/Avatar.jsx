@@ -1,6 +1,6 @@
 import styles from './Avatar.module.scss'
 import classNames from 'classnames'
-
+import PropTypes from 'prop-types'
 
 export default function Avatar({size = 90, url = require('../../../public/images/avatar.png'), verified = false}){
  
