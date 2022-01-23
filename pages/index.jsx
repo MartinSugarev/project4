@@ -5,7 +5,7 @@ import Avatar from '../src/components/avatar/Avatar.jsx'
 
 export default function Index() {
   return (
-    <Avatar  />
+    <Avatar url={require('../public/images/avatar.png')} />
   )
 
   
