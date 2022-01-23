@@ -1,12 +1,6 @@
 @use "../../styles/colors";
 
 
-.image{
-    object-fit: fill;
-    border-radius: 50%;
-    width: 100%;
-
-}
 .avatar{
 display: grid;
 position: relative;    
@@ -15,6 +9,13 @@ border-radius: 10px;
 border-color: colors.$primary_main;
 place-items: center;
 border-width: 3px;
+}
+
+.image{
+    object-fit: fill;
+    border-radius: 50%;
+    width: 100%;
+
 }
 
 .badge{
