@@ -3,11 +3,12 @@ import badge from  '../../../public/images/verified.svg'
 export default function Avatar({size = 90, url, verified = false}){
 
 
-return <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
+return (
+<div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
         <img className={styles.image}  src={url.default.src} alt="Avatar"/>
-       <img className={styles.badge} src={badge.src} />
+       { verified ? <img className={styles.badge} src={badge.src} />  : <img className={styles.badge} src={badge.src} style={{display: 'none'}}/> }
    </div>
-
+)
 
 
 }
