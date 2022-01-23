@@ -5,7 +5,7 @@ import User from '../src/components/user/User'
 
 export default function Index() {
   return (
-   <User name="Martin" info="asndkadnkad" />
+   <Avatar url={require('../public/images/avatar.png')} />
   )
 
   
