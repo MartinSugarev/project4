@@ -16,3 +16,8 @@ return (
 )
 
 }
+
+Avatar.propTypes = {
+    size: PropTypes.number,
+    verified: PropTypes.boolean
+}
