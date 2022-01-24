@@ -10,8 +10,8 @@ export default function Avatar({size = 90, url, verified = false}){
 return (
     
    <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
-        <img className={styles.image} style={{width: '100%', height: '100%', borderRadius: '50%'}}  src={url.default.src} alt="Image"/>
-       { verified ? <div className={styles.badge}> <img style={{width: '25px'}} src={badge.src} /></div>   : <div className={styles.badge}> <img  src={badge.src} style={{display: 'none'}}/></div>  }
+        <img className={styles.image}  src={url.default.src} alt="Image"/>
+       { verified ? <img className={styles.badge} src={badge.src} />   :  <img className={styles.badge} src={badge.src}/> }
    </div>
 );
 };
