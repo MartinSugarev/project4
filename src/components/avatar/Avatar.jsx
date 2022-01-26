@@ -6,7 +6,7 @@ import badge from  '../../../public/images/verified.svg'
 
 
 
-export default function Avatar({size = 90, url, verified = false}){
+export default function Avatar({size = 90, url = require('../../../public/images/avatar.png'), verified = false}){
 return (
     <>
    <div className={styles.Avatar} style={{width: size + 'px', height: size + 'px'}} >
