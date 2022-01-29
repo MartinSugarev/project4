@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name = 'Clock' , likes = 0 ,mediaUrl, user , price = 12.2, currency = 'eth' }){
+export default function Card({name , likes = 0 ,mediaUrl, user , price , currency }){
 
 //
 return <C className={styles.card}>
