@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name, likes = 0 ,mediaUrl, user, price , currency }){
+export default function Card({name, likes = 0 ,mediaUrl, user, price = 111 , currency }){
 
 //
 return <C className={styles.card}>
@@ -16,8 +16,8 @@ return <C className={styles.card}>
        <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/> 
     <div className={styles.container}>
        <div >
-           <strong className={styles.title}>{currency}</strong>
-            <strong className={styles.price}>{price}</strong>
+           <p className={styles.title}>{currency}</p>
+            <p className={styles.price} id="price">{'~' + price}</p>
        </div>
        <div>
          <Chip className={styles.likes} color="secondary" icon={<FavoriteRoundedIcon />} label={millify(likes)} />
