@@ -1,0 +1,28 @@
+@use "../../styles/colors";
+
+.user{
+height: 150px;
+width: 350px;
+position: relative;    
+border-style: dashed;
+border-radius: 10px;
+border-color: colors.$primary_main;
+border-width: 3px;
+display: flex;
+justify-content:center ;
+align-items: center;
+flex-direction: column;
+}
+.name{
+position: absolute;
+color: white;
+left: 65%;
+top: 33%;
+
+}
+.info{
+position: absolute;
+color: colors.$secondary_main;
+left: 65%;
+top: 36%;
+}
