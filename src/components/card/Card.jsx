@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name = 'Clock', likes = 0 ,mediaUrl, user, price = 111 , currency = 'eth' }){
+export default function Card({name , likes = 0 ,mediaUrl, user, price , currency }){
 
 //
 return <C className={styles.card}>
@@ -17,7 +17,7 @@ return <C className={styles.card}>
     <div className={styles.container}>
        <div >
             <p className={styles.name}>{name}</p>
-            <p className={styles.price} id="price">{'~' + price}</p>
+            <p className={styles.price} id="price">{price}</p>
             <p className={styles.title}>{currency}</p>
        </div>
        <div>
