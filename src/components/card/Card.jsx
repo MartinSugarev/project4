@@ -2,13 +2,14 @@ import styles from './Card.module.scss'
 import { Card as C, Chip} from "@mui/material"
 import Avatar from '../avatar/Avatar'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import PropTypes from 'prop-types';
 
-export default function Card({name, likes ,mediaUrl, user, price, currency}){
+export default function Card({name, likes = 111 ,mediaUrl, user, price, currency}){
 
 //
 return <C className={styles.card}>
     <div className={styles.avatar}>
-        <Avatar />
+        <Avatar url='/images/avatar.png'/>
     </div>
     <div className={styles.media}>
        <img src={mediaUrl} style={{objectFit: 'contain'}}/> 
@@ -19,10 +20,24 @@ return <C className={styles.card}>
             <strong className={styles.price}>{price}</strong>
        </div>
        <div>
-         <Chip className={styles.likes} icon={<FavoriteRoundedIcon />} label={likes} />
+         <Chip className={styles.likes} color="secondary" icon={<FavoriteRoundedIcon />} label={likes} />
        </div>
     </div>
 
 </C>
 
+}
+
+Card.PropTypes = {
+    name: PropTypes.string,
+    likes: PropTypes.number,
+    mediaUrl: PropTypes.string,
+    user: {
+        avatar: {
+            url: PropTypes.string
+        },
+        verified: PropTypes.boolean
+    },
+    price: PropTypes.string,
+    currency: PropTypes.string
 }
