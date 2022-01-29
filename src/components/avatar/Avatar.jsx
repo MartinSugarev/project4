@@ -6,12 +6,12 @@ import badge from  '../../../public/images/verified.svg'
 
 
 
-export default function Avatar({size = 90, url = require('../../../public/images/avatar.png'), verified = false}){
+export default function Avatar({size = 90, url , verified = false}){
 return (
     <>
    <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
-        <img className={styles.image}  src={url.default.src} alt="Image"/>
-       { verified ? <img className={styles.badge} src={badge.src} />   :  <img className={styles.badge} src={badge.src}/> }
+        <img className={styles.image}  src={url} alt="Image"/>
+       { verified ? <img className={styles.badge} src={'/images/verified.svg'} />   :  <img className={styles.badge} src={'/images/verified.svg'}/> }
    </div>
    </>
 );
