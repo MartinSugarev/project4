@@ -2,12 +2,12 @@ import React, { useRef, useEffect } from 'react'
 import styles from './Card.module.scss'
 import { Card as C, Chip} from "@mui/material"
 import Avatar from '../avatar/Avatar'
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name , likes = 0 ,mediaUrl, user , price, currency }){
+export default function Card({name = 'Clock' , likes = 0 ,mediaUrl, user , price = '12.2' , currency = 'eth' }){
 
     const el = useRef();
 useEffect(() => {
@@ -19,10 +19,9 @@ useEffect(() => {
        el.current.classList.add('float')
        el.current.innerText = `~${n.toFixed(1)}`
    }
-    
+    ///
 
-}, [])
-
+});
 
 return <C className={styles.card}>
     <div className={styles.avatar}>
@@ -30,13 +29,13 @@ return <C className={styles.card}>
     </div>
        <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/> 
     <div className={styles.container}>
-       <div >
+       <div>
             <p className={styles.name}>{name}</p>
             <p ref={el} className={styles.price} >{price}</p>
             <p className={styles.title}>{currency}</p>
        </div>
        <div>
-         <Chip className={styles.likes} color="secondary" icon={<FavoriteRoundedIcon />} label={millify(likes)} />
+         <Chip className={styles.likes} color="secondary" icon={<FavoriteBorderIcon />} label={millify(likes)} />
        </div>
     </div>
 
