@@ -17,7 +17,7 @@ return <C className={styles.card}>
     <div className={styles.container}>
        <div >
             <p className={styles.name}>{name}</p>
-            <p className={styles.price} >{price}</p>
+            <p className={styles.price} >{price.toFixed(1)}</p>
             <p className={styles.title}>{currency}</p>
        </div>
        <div>
