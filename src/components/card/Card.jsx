@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name = 'Clock' , likes = 0 ,mediaUrl, user , price = '12.2' , currency = 'eth' }){
+export default function Card({name , likes = 0 ,mediaUrl, user , price , currency}){
 
     const el = useRef();
 useEffect(() => {
@@ -30,9 +30,9 @@ return <C className={styles.card}>
        <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/> 
     <div className={styles.container}>
        <div>
-            <p className={styles.name}>{name}</p>
-            <p ref={el} className={styles.price} >{price}</p>
-            <p className={styles.title}>{currency}</p>
+            <strong className={styles.name}>{name}</strong>
+            <strong ref={el} className={styles.price} >{price}</strong>
+            <strong className={styles.title}>{currency}</strong>
        </div>
        <div>
          <Chip className={styles.likes} color="secondary" icon={<FavoriteBorderIcon />} label={millify(likes)} />
