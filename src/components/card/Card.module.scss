@@ -1,5 +1,7 @@
 @use "../../styles/colors";
 
+
+
 .card{
     height: 60vh;
     width: 23vw;
@@ -32,22 +34,29 @@
     justify-content: space-between;
     
 }
-.title{
-    display: block;
-    margin: 0;
-    padding: 0;
-    color: colors.$text_secondary;
 
+.title{
+    display: inline;
+    margin: 3px;
+    padding: 0;
+    color: colors.$secondary_main;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .price{
-    display: block;
+    display: inline;
     margin: 0;
     padding: 0;
     color: colors.$secondary_main;
+    font-weight: bold;
 }
 .likes{
     color: colors.$secondary_main;
 }
 #id:before {
     content:' ~ ';
+}
+.name{
+    margin: 0;
+    padding: 0;
 }
