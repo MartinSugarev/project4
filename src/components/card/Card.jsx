@@ -8,7 +8,7 @@ import millify from "millify";
 
 export default function Card({name , likes = 0 ,mediaUrl, user , price , currency }){
 
-//
+
 return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url='/images/avatar.png'/>
@@ -17,7 +17,7 @@ return <C className={styles.card}>
     <div className={styles.container}>
        <div >
             <p className={styles.name}>{name}</p>
-           {price % 1 === 0 ? <p className={styles.price} >{price}</p> :  price && <p className={styles.price} >{"~ " + price}</p>} 
+             { price % 1 === 0 ? <p className={styles.price} >{price}</p> : price && <p className={styles.price} >{"~ " + price.toFixed(1)}</p>}
             <p className={styles.title}>{currency}</p>
        </div>
        <div>
