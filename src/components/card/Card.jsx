@@ -17,7 +17,7 @@ return <C className={styles.card}>
     <div className={styles.container}>
        <div >
             <p className={styles.name}>{name}</p>
-            <p className={styles.price} >{price.toFixed(1)}</p>
+           {price % 1 === 0 ? <p className={styles.price} >{price}</p> :  price && <p className={styles.price} >{"~ " + price}</p>} 
             <p className={styles.title}>{currency}</p>
        </div>
        <div>
