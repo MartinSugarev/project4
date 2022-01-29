@@ -3,8 +3,10 @@ import { Card as C, Chip} from "@mui/material"
 import Avatar from '../avatar/Avatar'
 import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 import PropTypes from 'prop-types';
+import millify from "millify";
 
-export default function Card({name, likes = 111 ,mediaUrl, user, price, currency}){
+
+export default function Card({name, likes = 0 ,mediaUrl, user, price, currency}){
 
 //
 return <C className={styles.card}>
@@ -20,7 +22,7 @@ return <C className={styles.card}>
             <strong className={styles.price}>{price}</strong>
        </div>
        <div>
-         <Chip className={styles.likes} color="secondary" icon={<FavoriteRoundedIcon />} label={likes} />
+         <Chip className={styles.likes} color="secondary" icon={<FavoriteRoundedIcon />} label={millify(likes)} />
        </div>
     </div>
 
