@@ -21,15 +21,13 @@ useEffect(() => {
        el.current.classList.add('float')
        el.current.innerText = `~${n.toFixed(1)} ${c}`
    }
-    ///
-
 });
 
 return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
-           <div className={styles.badge} style={{borderRadius: "10px"}}> <CircleIcon  fontSize="inherit" /> <span>LIVE</span></div>
+           {timeLeft ? <div className={styles.badge} > <CircleIcon  fontSize="inherit" /> <span>LIVE</span></div> : ''}
            {timeLeft ?   <Countdown /> : ''} 
           <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
@@ -50,6 +48,10 @@ Card.propTypes = {
     name: PropTypes.string,
     likes: PropTypes.number,
     mediaUrl: PropTypes.string,
+    user:{
+        avatarUrl: PropTypes.string,
+        verified: PropTypes.boolean
+    },
     price: PropTypes.string,
     currency: PropTypes.string,
     timeLeft: PropTypes.number
