@@ -13,7 +13,7 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
 
     const el = useRef();
 useEffect(() => {
-  const c = currency 
+  const c = currency.toUpperCase()
   const n = Number(el.current.innerText)
    if(n % 1 === 0 ){
     el.current.innerText = `${n} ${currency}`
@@ -29,7 +29,7 @@ return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
-           <div className={styles.badge}> <CircleIcon  fontSize="inherit" /> <span>LIVE</span></div>
+           <div className={styles.badge} style={{borderRadius: "10px"}}> <CircleIcon  fontSize="inherit" /> <span>LIVE</span></div>
            {timeLeft ?   <Countdown /> : ''} 
           <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
