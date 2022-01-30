@@ -5,9 +5,11 @@ import Avatar from '../avatar/Avatar'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PropTypes from 'prop-types';
 import millify from "millify";
+import Countdown from '../countdown/Countdown'
+import CircleIcon from '@mui/icons-material/Circle';
 
 
-export default function Card({name , likes = 0 ,mediaUrl, user, price, currency }){
+export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft }){
 
     const el = useRef();
 useEffect(() => {
@@ -28,7 +30,9 @@ return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
-       <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/> 
+           <div className={styles.badge}> <CircleIcon  fontSize="inherit" /> <span>LIVE</span></div>
+           {timeLeft ?   <Countdown /> : ''} 
+          <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
        <div>
             <strong className={styles.title}>{name}</strong>
@@ -48,5 +52,6 @@ Card.propTypes = {
     likes: PropTypes.number,
     mediaUrl: PropTypes.string,
     price: PropTypes.string,
-    currency: PropTypes.string
+    currency: PropTypes.string,
+    timeLeft: PropTypes.number
 }

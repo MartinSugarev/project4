@@ -1,0 +1,14 @@
+@use "../../styles/colors";
+
+.counter{
+    width: 90%;
+    height: 43px;
+    background-color: colors.$secondary_main;
+    text-align: center;
+    position: absolute;
+    bottom: 24%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: colors.$background_paper;
+    line-height: 43px;
+}

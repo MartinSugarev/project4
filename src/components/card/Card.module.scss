@@ -63,3 +63,21 @@
     font-weight: bold;  
     line-height: 12px;  
 }
+.badge{
+    width: 23%;
+    height: 8%;
+    background-color: colors.$secondary_main;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    color: colors.$background_default;
+    position: absolute;
+    top: 26%;
+    left: 10%;
+    font-size: 0.8rem;
+
+}
