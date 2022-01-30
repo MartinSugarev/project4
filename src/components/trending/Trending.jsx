@@ -17,9 +17,9 @@ return (
          </Select>
          </div> 
          <Grid container spacing={1}>
-               {cards.map((c) => {
+               {cards.map((c, index) => {
                    const { name, mediaUrl, user, price, currency, timeLeft } = c
-                   return <Grid item > <Card name={name} mediaUrl={mediaUrl} user={user} price={price} currency={currency} timeLeft={timeLeft}  /> </Grid>
+                   return <Grid key={index} item > <Card name={name} mediaUrl={mediaUrl} user={user} price={price} currency={currency} timeLeft={timeLeft}  /> </Grid>
                })}
           </Grid>
          </Container>
