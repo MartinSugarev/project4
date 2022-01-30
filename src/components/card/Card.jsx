@@ -13,9 +13,8 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
 
     const el = useRef();
 useEffect(() => {
-  const c = currency.toUpperCase()  
+  const c = currency 
   const n = Number(el.current.innerText)
-  console.log(n)
    if(n % 1 === 0 ){
     el.current.innerText = `${n} ${currency}`
    }else{
