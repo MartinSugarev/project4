@@ -5,7 +5,8 @@ import styles from '../trending/Trending.module.scss'
 export default function Trending({cards = []}){
 
 return (
-    <Container className={styles.container} >
+    <div className={styles.container} >
+        <Container  >
          <div className={styles.wrapper}>
          <h1>Trending</h1>
          <Select value=""  displayEmpty>
@@ -20,8 +21,9 @@ return (
                    const { name, mediaUrl, user, price, currency } = c
                    return <Grid item > <Card name={name} mediaUrl={mediaUrl} user={user} price={price} currency={currency}   /> </Grid>
                })}
-         </Grid>
-    </Container>
+          </Grid>
+         </Container>
+    </div>
     
 )
 
