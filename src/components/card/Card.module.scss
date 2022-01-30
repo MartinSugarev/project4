@@ -35,7 +35,7 @@
     
 }
 
-.title{
+.name{
     display: inline;
     margin: 3px;
     padding: 0;
@@ -56,7 +56,7 @@
 .price.float::before{
  content: "~";
 }
-.name{
+.title{
     display: block;
     margin: 0;
     padding: 0;

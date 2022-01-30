@@ -7,17 +7,17 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name , likes = 0 ,mediaUrl, user , price , currency}){
+export default function Card({name , likes = 0 ,mediaUrl, user , price = '15' , currency = 'eth'}){
 
     const el = useRef();
 useEffect(() => {
   const n = Number(el.current.innerText)
   console.log(n)
    if(n % 1 === 0 ){
-       console.log('not float')
+    el.current.innerText = `${n} ${currency}`
    }else{
        el.current.classList.add('float')
-       el.current.innerText = `~${n.toFixed(1)}`
+       el.current.innerText = `~${n.toFixed(1)} ${currency}`
    }
     ///
 
@@ -30,9 +30,8 @@ return <C className={styles.card}>
        <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/> 
     <div className={styles.container}>
        <div>
-            <strong className={styles.name}>{name}</strong>
+            <strong className={styles.title}>{name}</strong>
             <strong ref={el} className={styles.price} >{price}</strong>
-            <strong className={styles.title}>{currency}</strong>
        </div>
        <div>
          <Chip className={styles.likes} color="secondary" icon={<FavoriteBorderIcon />} label={millify(likes)} />
