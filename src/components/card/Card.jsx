@@ -7,17 +7,18 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 
 
-export default function Card({name , likes = 0 ,mediaUrl, user , price = '15' , currency = 'eth'}){
+export default function Card({name , likes = 0 ,mediaUrl, user, price, currency }){
 
     const el = useRef();
 useEffect(() => {
+  const c = currency.toUpperCase()  
   const n = Number(el.current.innerText)
   console.log(n)
    if(n % 1 === 0 ){
     el.current.innerText = `${n} ${currency}`
    }else{
        el.current.classList.add('float')
-       el.current.innerText = `~${n.toFixed(1)} ${currency}`
+       el.current.innerText = `~${n.toFixed(1)} ${c}`
    }
     ///
 
@@ -25,7 +26,7 @@ useEffect(() => {
 
 return <C className={styles.card}>
     <div className={styles.avatar}>
-        <Avatar url='/images/avatar.png'/>
+        <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
        <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/> 
     <div className={styles.container}>

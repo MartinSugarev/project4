@@ -11,7 +11,7 @@ return (
     <>
    <div className={styles.avatar} style={{width: size + 'px', height: size + 'px'}} >
         <img className={styles.image}  src={url} alt="Image"/>
-       { verified ? <img className={styles.badge} src={'/images/verified.svg'} />   :  <img className={styles.badge} src={'/images/verified.svg'}/> }
+       { verified ?  <img className={styles.badge} src={'/images/verified.svg'}/> : <img className={styles.badge} style={{display: "none"}} src={'/images/verified.svg'} /> }
    </div>
    </>
 );
