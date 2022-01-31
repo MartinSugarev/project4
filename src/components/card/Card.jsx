@@ -17,7 +17,7 @@ useEffect(() => {
    if(n % 1 === 0 ){
     el.current.innerText = `${n} ${currency}`
    }else{
-       el.current.innerText = `~${n.toFixed(1)} ${currency}`
+    el.current.innerText = `~${n.toFixed(1)} ${currency}`
    }
 });
 
@@ -29,7 +29,7 @@ return <C className={styles.card}>
                <CircleIcon fontSize="inherit" />
                <p>LIVE</p>
             </div> }
-           {timeLeft && <Countdown timeLeft /> } 
+           {timeLeft && <Countdown timeLeft={timeLeft} /> } 
           <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
        <div>
