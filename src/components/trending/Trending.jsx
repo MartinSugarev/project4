@@ -19,7 +19,7 @@ return (
          <Grid container spacing={1}>
                {cards.map((card, index) => {
                   // const { name, mediaUrl, user, price, currency, timeLeft } = card
-                   return <Grid key={card.index} item > <Card name={card.name} mediaUrl={card.mediaUrl} user={card.user} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  /> </Grid>
+                   return <Grid key={index} item > <Card name={card.name} mediaUrl={card.mediaUrl} user={card.user} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  /> </Grid>
                })}
           </Grid>
          </Container>
