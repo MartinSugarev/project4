@@ -9,7 +9,7 @@ import Countdown from '../countdown/Countdown'
 import CircleIcon from '@mui/icons-material/Circle';
 
 
-export default function Card({likes = 0 ,mediaUrl, user, price, currency, timeLeft }){
+export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft }){
 
     const el = useRef();
 useEffect(() => {
@@ -27,12 +27,12 @@ return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
-           {timeLeft && <div className={styles.badge}><CircleIcon fontSize="inherit" /> LIVE</div> }
+           {timeLeft && <div className={styles.badge}><CircleIcon fontSize="inherit" /><p>LIVE</p></div> }
            {timeLeft && <Countdown timeLeft /> } 
           <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
        <div>
-            <strong className={styles.title}></strong>
+            <strong className={styles.title}>{name}</strong>
             <strong ref={el} className={styles.price} >{price}</strong>
        </div>
        <div>
