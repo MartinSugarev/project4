@@ -27,7 +27,7 @@ return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
-           { timeLeft && <div className={styles.badge}><CircleIcon  fontSize="inherit" /> <span>LIVE</span></div> }
+           {timeLeft && <div className={styles.badge}><CircleIcon fontSize="inherit" /> LIVE</div> }
            {timeLeft && <Countdown timeLeft /> } 
           <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
