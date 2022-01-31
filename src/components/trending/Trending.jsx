@@ -18,8 +18,8 @@ return (
          </div> 
          <Grid container spacing={1}>
                {cards.map((card, index) => {
-                   const { name, mediaUrl, user, price, currency, timeLeft } = card
-                   return <Grid key={index} item > <Card name={name} mediaUrl={mediaUrl} user={user} price={price} currency={currency} timeLeft={timeLeft}  /> </Grid>
+                  // const { name, mediaUrl, user, price, currency, timeLeft } = card
+                   return <Grid key={card.index} item > <Card name={card.name} mediaUrl={card.mediaUrl} user={card.user} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  /> </Grid>
                })}
           </Grid>
          </Container>

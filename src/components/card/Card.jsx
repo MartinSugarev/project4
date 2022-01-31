@@ -18,7 +18,6 @@ useEffect(() => {
    if(n % 1 === 0 ){
     el.current.innerText = `${n} ${currency}`
    }else{
-       el.current.classList.add('float')
        el.current.innerText = `~${n.toFixed(1)} ${c}`
    }
 });
@@ -27,7 +26,10 @@ return <C className={styles.card}>
     <div className={styles.avatar}>
         <Avatar url={user.avatar.url} verified={user.verified}/>
     </div>
-           {timeLeft && <div className={styles.badge}><CircleIcon fontSize="inherit" /><p>LIVE</p></div> }
+           {timeLeft && <div className={styles.badge}>
+               <CircleIcon fontSize="inherit" />
+               <p>LIVE</p>
+            </div> }
            {timeLeft && <Countdown timeLeft /> } 
           <img className={styles.media} src={mediaUrl} style={{objectFit: 'contain'}}/>
     <div className={styles.container}>
