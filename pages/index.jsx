@@ -55,7 +55,7 @@ const obj = {
 }
 
 export default function Index() {
-  return  <Trending cards={obj} />
+  return  <Trending  />
   
 
 }
