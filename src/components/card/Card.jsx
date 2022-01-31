@@ -13,12 +13,11 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
 
     const el = useRef();
 useEffect(() => {
-  const c = currency.toUpperCase()
   const n = Number(el.current.innerText)
    if(n % 1 === 0 ){
     el.current.innerText = `${n} ${currency}`
    }else{
-       el.current.innerText = `~${n.toFixed(1)} ${c}`
+       el.current.innerText = `~${n.toFixed(1)} ${currency}`
    }
 });
 
